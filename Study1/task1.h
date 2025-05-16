@@ -1,4 +1,7 @@
 ﻿#pragma once
+#ifndef TASK1
+#define TASK1
+
 #include <iostream>
 #include <string>
 #include <stdexcept>
@@ -11,7 +14,10 @@ using namespace std;
 
 Используйте механизм исключений.
 */
+
 class StringMetods {
 public:
 	static int stringToInt(const string& str);
 };
+
+#endif // TASK1

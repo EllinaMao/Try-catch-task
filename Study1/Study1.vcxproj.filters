@@ -26,5 +26,8 @@
     <ClInclude Include="task1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mystack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,7 +1,8 @@
 ﻿#include <iostream>
 #include <string>
 #include <stdexcept>
-#include "task1.h"
+//#include "task1.h"
+#include "mystack.h"
 using namespace std;
 
 
@@ -20,7 +21,7 @@ using namespace std;
 */
 int main()
 {
-//waiting for task
+#ifdef TASK1
 	string str("-12456");
 	string errorStr("blaba123");
 
@@ -37,6 +38,11 @@ int main()
 	catch (const exception& e) {
 		cout << "Exception: " << e.what() << endl;
 	}
+
+#endif //TASK1
+
+
+
 
 
 }
