@@ -1,4 +1,6 @@
 ﻿#pragma once
+#ifndef MYSTACK
+#define MYSTACK
 #include <iostream>
 #include <stdexcept>
 using namespace std;
@@ -156,3 +158,4 @@ T Stack<T>::Pop()
 	}
 
 }
+#endif // MYSTACK
