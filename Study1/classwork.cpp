@@ -40,10 +40,42 @@ int main()
 	}
 
 #endif //TASK1
+#ifdef MYSTACK
+    try {
+        Stack<int> s;
 
+        // Push elements
+        for (int i = 0; i < 5; ++i) {
+            s.Push(i);
+        }
 
+        // Output stack contents
+        cout << "Stack contents: ";
+        s.Output();
 
+        // Pop all elements
+        while (!s.IsEmpty()) {
+            cout << "Popped: " << s.Pop() << endl;
+        }
 
+        // Try popping from empty stack to trigger exception
+        cout << "Attempting to pop from empty stack..." << endl;
+        s.Pop();
+    }
+    catch (const overflow_error& e) {
+        cerr << "Overflow error: " << e.what() << endl;
+    }
+    catch (const underflow_error& e) {
+        cerr << "Underflow error: " << e.what() << endl;
+    }
+    catch (const bad_alloc& e) {
+        cerr << "Memory allocation failed: " << e.what() << endl;
+    }
+    catch (const exception& e) {
+        cerr << "Other exception: " << e.what() << endl;
+    }
 
+#endif // MYSTACK
+    return 0;
 }
 
